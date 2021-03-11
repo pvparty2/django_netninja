@@ -9,7 +9,7 @@
 <div class="articles">
   {% for article in articles %}
     <div class="article">
-      <h2><a href="#">{{ article }}</a></h2>
+      <h2><a href="{% url 'articles:details' article.slug %}">{{ article }}</a></h2>
       <p>{{ article.body|truncatechars:50 }}</p>
       <p>{{ article.date }}</p>
     </div>
