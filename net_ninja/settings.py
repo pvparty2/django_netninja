@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     # My apps.
-    'articles',
+    'articles.apps.ArticlesConfig',
 
     # Django apps.
     'django.contrib.admin',

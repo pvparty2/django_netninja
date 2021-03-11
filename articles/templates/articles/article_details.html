@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ article.text }}{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'articles/styles.css' %}">
+<h1>{{ article.text }}</h1>
+<div class="article">
+  <h2><a href="{% url 'articles:detail' %}">{{ article }}</a></h2>
+  <p>{{ article.body|truncatechars:50 }}</p>
+  <p>{{ article.date }}</p>
+</div>
+{% endblock %}    
