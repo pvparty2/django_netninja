@@ -4,7 +4,6 @@
 {% block title %}{{ article.text }}{% endblock %}
 
 {% block content %}
-<link rel="stylesheet" href="{% static 'articles/styles.css' %}">
 <img src="{{ article.thumb.url }}"/>
 <h1>{{ article.text }}</h1>
 <div class="article">
