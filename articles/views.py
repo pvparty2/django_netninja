@@ -10,3 +10,6 @@ def article_list(request):
 def article_details(request, slug):
     article = get_object_or_404(Article, slug=slug)
     return render(request, 'articles/article_details.html', {'article': article})
+
+def article_create(request):
+    return render(request, 'articles/article_create.html')
