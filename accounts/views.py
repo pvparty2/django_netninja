@@ -24,6 +24,11 @@ def login_view(request):
             # Log in the user.
             user = form.get_user()
             login(request, user)
+
+            # Redirect to article creation.
+            if 'next' in request.POST:
+                return redirect(request.POST.get('next'))
+
             # Redirect to list of articles.
             return redirect('articles:list')
     else:
